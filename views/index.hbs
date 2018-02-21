@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+    </style>
     <meta charset="utf-8">
-    <title>Vacations Home Page</title>
-    <link rel="stylesheet" href="/public/styles.css">
+    <title>Vacation</title>
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <section id="header">
-      <h1 align="center" style="color: red; font-size:50px">Vacation!!!!!!!</h1>
-      <ul align="center" style="list-style-type: none;">
-        <li>Hawaii
-        <li>Venice
-        <li>Chicago
-      </ul>
-    </section>
-    <br><br>
-    <section id="hawaii">
-      <h1 align="center" style="color: green; font-size:50px">Hawaii</h1>
-      <p>Current Temperature: </p>
-      <img src="https://www.goway.com/media/cache/41/2a/412aacf40a0e7d0c81b9db4c77c8c1f8.jpg" alt="food" width="33%" height="10%">
-      <img src="http://www.internettraveltips.com/wp-content/uploads/2015/03/itt_thewonofthenapcoa.jpg" alt="explore" width="33%" height="10%">
-      <img src="http://luxurylaunches.com/wp-content/uploads/2014/08/beach-chair-hawaii.jpg" alt="relax" width="33%" height="10%">
-    </section>
+    <h1 class="Title">Choose Your City!</h1>
+    <div id="box">
+      <div id="top">
+        <section id="topright">
+        <a href="/losangelos">Los Angelos</a>
+        </section>
+
+        <section id="topmiddle">
+        <a href="/sanantonio">San Antonio</a>
+        </section>
+
+        <section id="topleft">
+        <a href="/chicago">Chicago</a>
+        </section>
+
+      </div>
+        <h1 class="Title" id="CityName">
+          {{CityName}}
+        </h1>
+        <section id="geocode">
+          <p>{{temperature}}</p>
+        </section>
+      <div id="middle">
+        <section id= "middleright">
+          <img src="{{imgone}}">
+        </section>
+
+        <section id="middlemiddle">
+            <img src="{{imgtwo}}">
+        </section>
+        <section id="middleleft">
+              <img src="{{imgthree}}">
+        </section>
+      </div>
+      <div id="footer">
+        Copy Right Paly WebDev {{getCurrentYear}}
+
+      </div>
+    </div>
+
   </body>
 </html>

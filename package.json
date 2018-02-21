@@ -1,10 +1,10 @@
 {
   "name": "vacation",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "Jeremy Xu",
   "license": "ISC",
@@ -13,6 +13,17 @@
     "express": "^4.16.2",
     "hbs": "^4.0.1",
     "nodemon": "^1.14.12",
-    "path": "^0.12.7"
-  }
+    "path": "^0.12.7",
+    "yargs": "^11.0.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheCoolGuysClub/Vacation_Jeremy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TheCoolGuysClub/Vacation_Jeremy/issues"
+  },
+  "homepage": "https://github.com/TheCoolGuysClub/Vacation_Jeremy#readme",
+  "description": ""
 }
