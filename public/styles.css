@@ -96,9 +96,10 @@ html{
     #topleft:hover{
       cursor:pointer;
     }
-    .Title{
+    .title {
       /* color:red; */
       text-align: center;
+      color: blue;
     }
     img{
       height:300px;

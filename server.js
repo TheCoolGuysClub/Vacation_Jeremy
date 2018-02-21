@@ -19,53 +19,53 @@ hbs.registerHelper(`weatherResults`,(lag,lng)=>{
 app.get(`/`,(req,res)=>{
   // res.redirect(`www.paly.net`);
   res.render(`index.hbs`,{
-      temperature:`Choose a city!`,
-    imgone:`https://mitechnews.com/wp-content/uploads/2017/08/on-vacation.jpg`,
-    imgtwo:`http://i2.cdn.turner.com/money/dam/assets/140730120927-employee-mandatory-vacation-1024x576.jpg`,
-    imgthree:`https://www.lachicotte.com/images/rotate/vacation-rentals-slider3.jpg`,
-    CityName:`Choose Your City`,
+      temperature:"",
+      imgone:'https://www.ncl.com/sites/default/files/DestinationGalleries.Hawaii.SnorkelingBay900x400.jpg',
+      imgtwo:'https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1024,c_fill,g_auto,h_576,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F170606121056-hawaii---travel-destination---shutterstock-457528552.jpg',
+      imgthree: 'https://www.visittheusa.com/sites/default/files/styles/hero_m_1300x700/public/images/hero_media_image/2017-01/Hawaii1_Web72DPI_crop.jpg?itok=ZnJSRAUq',
+    CityName:"",
 
   });
-app.get(`/losangelos`,(req,res)=>{
+app.get(`/hawaii`,(req,res)=>{
   const lat =`34.0522342`;
   const lng =`-118.2436849`;
   weather.weatherResults(lat,lng)
   .then((response) => {
       res.render(`index.hbs`,{
-        temperature:`The temperature of Los Angelos is ${response.data.currently.temperature} degress!`,
-        CityName:`Los Angelos`,
-        imgone:`http://travel.home.sndimg.com/content/dam/images/travel/fullset/2011/09/12/af/chicago-lake-shore-drive.rend.hgtvcom.616.462.suffix/1491585454223.jpeg`,
-        imgtwo:`http://vacationpackagesallinclusiv-e.com/wp-content/uploads/2012/10/Chicago.jpg`,
-        imgthree:`http://athomemms.com/index/wp-content/uploads/2014/03/What-to-do-in-Chicago-IL-fun-family-vacation-ideas-.jpg`
+        temperature:`The temperature of Hawaii is ${response.data.currently.temperature} degress!`,
+        CityName:`Hawaii`,
+        imgone:'https://www.ncl.com/sites/default/files/DestinationGalleries.Hawaii.SnorkelingBay900x400.jpg',
+        imgtwo:'https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1024,c_fill,g_auto,h_576,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F170606121056-hawaii---travel-destination---shutterstock-457528552.jpg',
+        imgthree: 'https://www.visittheusa.com/sites/default/files/styles/hero_m_1300x700/public/images/hero_media_image/2017-01/Hawaii1_Web72DPI_crop.jpg?itok=ZnJSRAUq',
       })
     })
 });
-app.get(`/sanantonio`,(req,res)=>{
+app.get(`/venice`,(req,res)=>{
   const lat = `29.4241219`;
   const lng = `-98.49362819999999`;
   weather.weatherResults(lat,lng)
   .then((response)=>{res.render(`index.hbs`,{
-    temperature:`The temperature of San Antonio is ${response.data.currently.temperature} degress! `,
-    CityName:`San Antonio`,
-    imgone:`https://www.chcp.edu/sites/default/files/CHCP-San-Antonio-Campus.jpg`,
-    imgtwo:`https://cache-graphicslib.viator.com/graphicslib/thumbs360x240/10152/SITours/san-antonio-super-pass-in-san-antonio-424265.jpg`,
-    imgthree:`http://www.planetware.com/photos-large/USTX/texas-san-antonio-things-to-do-the-saga.jpg`
+    temperature:`The temperature of Venice is ${response.data.currently.temperature} degress! `,
+    CityName:`Venice`,
+    imgone:'https://fthmb.tqn.com/yaSJS3o6DipIAeihV5AMX9S8x-M=/960x0/filters:no_upscale()/italy--venice--elevated-view-of-canal-in-city-543346423-5982583b396e5a0011c9ef3e.jpg'
+    imgtwo:'https://www.lacity.org/sites/g/files/wph781/f/styles/tiled_homepage_blog/public/bigstock-griffith-164078174.jpg?itok=By-CwsP2',
+    imgthree: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTufclbTHskY1mzRdqsRNjcpbHV0BI9z4tn9IbKIYcezuWfgvjKxQ',
   })
 })
 
 
 });
-app.get(`/chicago`,(req,res)=>{
+app.get(`/tokyo`,(req,res)=>{
   const lat=`41.8781136`;
   const lng = `-87.6297982`;
   weather.weatherResults(lat,lng)
   .then((response)=>{
     res.render(`index.hbs`,{
-      temperature:`The temperature of Chicago is ${response.data.currently.temperature} degress!` ,
-      CityName:`Chicago`,
-      imgone:`https://urbanmatter.com/chicago/wp-content/uploads/2015/04/Chicago-Architecture.jpg`,
-      imgtwo:`http://www.essexinn.com/d/essexinn/media/Attractions/3583017878_ee2e8e3d8b_b_1423674445483.jpg`,
-      imgthree:`https://i.kinja-img.com/gawker-media/image/upload/s--T0-K6gLo--/c_scale,fl_progressive,q_80,w_800/wtcnqekq9zwta5gpq48r.jpg`
+      temperature:`The temperature of tokyo is ${response.data.currently.temperature} degress!` ,
+      CityName:`tokyo`,
+      imgone:'https://fthmb.tqn.com/yaSJS3o6DipIAeihV5AMX9S8x-M=/960x0/filters:no_upscale()/italy--venice--elevated-view-of-canal-in-city-543346423-5982583b396e5a0011c9ef3e.jpg'
+      imgtwo:'https://www.lacity.org/sites/g/files/wph781/f/styles/tiled_homepage_blog/public/bigstock-griffith-164078174.jpg?itok=By-CwsP2',
+      imgthree: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTufclbTHskY1mzRdqsRNjcpbHV0BI9z4tn9IbKIYcezuWfgvjKxQ',
     })
   })
 });
